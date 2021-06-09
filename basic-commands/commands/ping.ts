@@ -1,4 +1,4 @@
-import { NaticoCommand } from 'https://deno.land/x/natico@0.1.0/mod.ts';
+import { NaticoCommand } from 'https://deno.land/x/natico@0.1.1/mod.ts';
 export default class ping extends NaticoCommand {
 	constructor() {
 		super('ping', {
