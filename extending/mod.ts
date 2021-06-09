@@ -24,4 +24,4 @@ export class BotClient extends NaticoClient {
 	}
 }
 const botClient = new BotClient();
-botClient.start('ODM3NjgxMzk1MTk0Nzg5OTY5.YIwFlw.tII3V4AlijnIpHV0cxxy1IdKueU');
+botClient.start(token);
