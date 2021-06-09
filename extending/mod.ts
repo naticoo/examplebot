@@ -3,13 +3,13 @@ import {
 	NaticoCommandHandler,
 	NaticoListenerHandler,
 } from '../deps.ts';
-class BotClient extends NaticoClient {
+export class BotClient extends NaticoClient {
 	constructor() {
 		super({});
 	}
 	commandHandler: NaticoCommandHandler = new NaticoCommandHandler(this, {
 		directory: './commands',
-		prefix: '!',
+		prefix: ['!'],
 	});
 	listenerHandler: NaticoListenerHandler = new NaticoListenerHandler(this, {
 		directory: './listeners',
@@ -24,4 +24,4 @@ class BotClient extends NaticoClient {
 	}
 }
 const botClient = new BotClient();
-botClient.start(token);
+botClient.start('ODM3NjgxMzk1MTk0Nzg5OTY5.YIwFlw.tII3V4AlijnIpHV0cxxy1IdKueU');
