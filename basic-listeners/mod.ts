@@ -3,7 +3,6 @@ import {
   NaticoCommandHandler,
   NaticoListenerHandler,
 } from "../deps.ts";
-//TODO: add listener and task example
 class BotClient extends NaticoClient {
   constructor() {
     super({});
@@ -21,8 +20,6 @@ class BotClient extends NaticoClient {
     });
     await this.listenerHandler.loadALL();
     await this.commandHandler.loadALL();
-
-    console.log(this.listenerHandler.emitters);
     return this.login(token);
   }
 }
