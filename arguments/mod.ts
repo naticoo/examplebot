@@ -5,7 +5,7 @@ class BotClient extends NaticoClient {
 	}
 	commandHandler: NaticoCommandHandler = new NaticoCommandHandler(this, {
 		directory: './commands',
-		prefix: () => ['!'],
+		prefix: '!',
 		owners: ['336465356304678913'],
 		guildonly: false,
 	});

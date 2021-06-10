@@ -1,4 +1,4 @@
-import { NaticoCommand, Matches, DiscordenoMessage } from '../../deps.ts';
+import { NaticoCommand, DiscordenoMessage, Matches } from '../../deps.ts';
 export default class say extends NaticoCommand {
 	constructor() {
 		super('say', {
@@ -6,17 +6,19 @@ export default class say extends NaticoCommand {
 			aliases: ['say'],
 			options: [
 				{
-					//Args are setup like slash commands, later on ill make a arg parser for now this always gives strings
 					type: 3,
 					name: 'text',
 					description: 'text you want the bot to say',
 					required: true,
 					match: Matches.rest,
+					customType: (message, content) => {
+						return content.split(' ').reverse().join('🦀');
+					},
 				},
 			],
 		});
 	}
 	exec(message: DiscordenoMessage, { text }: { text: string }) {
-		message.reply('Pong' + text);
+		message.reply(text);
 	}
 }
