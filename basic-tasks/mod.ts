@@ -1,7 +1,7 @@
-import { NaticoClient, NaticoTaskHandler } from "../deps.ts";
+import { NaticoClient, NaticoTaskHandler, NaticoClientOptions } from "../deps.ts";
 class BotClient extends NaticoClient {
-  constructor() {
-    super({});
+  constructor(public options?: NaticoClientOptions) {
+    super(options);
   }
   taskHandler: NaticoTaskHandler = new NaticoTaskHandler(this, {
     directory: "./tasks",
@@ -12,5 +12,5 @@ class BotClient extends NaticoClient {
     return this.login(token);
   }
 }
-const botClient = new BotClient();
+const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"] });
 botClient.start(token);
