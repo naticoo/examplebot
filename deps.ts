@@ -1,1 +1,1 @@
-export * from "https://deno.land/x/natico@1.2.4/mod.ts";
+export * from "https://deno.land/x/natico@1.3.0/mod.ts";
