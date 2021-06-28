@@ -23,10 +23,6 @@ class BotClient extends NaticoClient {
 }
 const botClient = new BotClient({
   intents: ["Guilds", "GuildMessages", "GuildVoiceStates"],
-<<<<<<< HEAD
   token: "Jimmy dmed me over this :)",
-=======
-  token: "NzQ4OTg1MDg3NDIwMzk5NzE3.X0lYuA.UxsqY8zspQ3_mjGBjlq4xveI7m0",
->>>>>>> aec106116d8ff7474a3256340e0d79c654d5763a
 });
 botClient.start();
