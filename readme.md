@@ -1,2 +1,1 @@
-Docs https://doc.deno.land/https/github.com/naticoo/framework/blob/main/mod.ts
-
+Docs https://doc.deno.land/https/deno.land/x/natico/mod.ts
