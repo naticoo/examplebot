@@ -1,1 +1,1 @@
-export * from 'https://raw.githubusercontent.com/naticoo/framework/university/mod.ts';
+export * from "https://raw.githubusercontent.com/naticoo/framework/university/mod.ts";
