@@ -20,6 +20,6 @@ class BotClient extends NaticoClient {
 }
 const botClient = new BotClient({
   intents: ["Guilds", "GuildMessages", "GuildVoiceStates"],
-  token: "ODI2NDgwMjg2MTY5OTU2NDEz.YGNFvw.7D-lI9ek4GjUZC2WBNFKIc3vmGg",
+  token: "",
 });
 botClient.start();
