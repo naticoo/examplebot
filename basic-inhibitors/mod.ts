@@ -12,13 +12,13 @@ class BotClient extends NaticoClient {
   inhibitorHandler: NaticoInhibitorHandler = new NaticoInhibitorHandler(this, {
     directory: "./inhibitors",
   });
-  async start(token: string) {
+  async start() {
     //Set the inhibitor handler to be used
     this.commandHandler.setInhibitorHandler(this.inhibitorHandler);
     await this.commandHandler.loadALL();
     await this.inhibitorHandler.loadALL();
-    return this.login(token);
+    return this.login();
   }
 }
-const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"] });
-botClient.start(token);
+const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"], token: "" });
+botClient.start();

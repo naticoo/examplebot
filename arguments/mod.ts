@@ -9,10 +9,10 @@ class BotClient extends NaticoClient {
     owners: ["336465356304678913"],
     guildonly: false,
   });
-  async start(token: string) {
+  async start() {
     await this.commandHandler.loadALL();
-    return this.login(token);
+    return this.login();
   }
 }
-const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"] });
-botClient.start(token);
+const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"], token: "" });
+botClient.start();

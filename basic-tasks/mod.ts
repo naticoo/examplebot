@@ -7,10 +7,10 @@ class BotClient extends NaticoClient {
     directory: "./tasks",
   });
 
-  async start(token: string) {
+  async start() {
     await this.taskHandler.loadALL();
-    return this.login(token);
+    return this.login();
   }
 }
-const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"] });
-botClient.start(token);
+const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"], token: "" });
+botClient.start();

@@ -10,14 +10,14 @@ export class BotClient extends NaticoClient {
   listenerHandler: NaticoListenerHandler = new NaticoListenerHandler(this, {
     directory: "./listeners",
   });
-  async start(token: string) {
+  async start() {
     this.listenerHandler.setEmitters({
       commandHandler: this.commandHandler,
     });
     await this.listenerHandler.loadALL();
     await this.commandHandler.loadALL();
-    return this.login(token);
+    return this.login();
   }
 }
-const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"] });
-botClient.start(token);
+const botClient = new BotClient({ intents: ["Guilds", "GuildMessages", "GuildVoiceStates"], token: "" });
+botClient.start();
