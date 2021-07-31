@@ -1,12 +1,12 @@
 import { NaticoClient, NaticoCommandHandler, NaticoInhibitorHandler, NaticoClientOptions } from "../deps.ts";
 class BotClient extends NaticoClient {
-  constructor(public options?: NaticoClientOptions) {
+  constructor(public options: NaticoClientOptions) {
     super(options);
   }
   commandHandler: NaticoCommandHandler = new NaticoCommandHandler(this, {
     directory: "./commands",
     prefix: "!",
-    owners: ["336465356304678913"],
+    owners: [336465356304678913n],
     guildonly: false,
   });
   inhibitorHandler: NaticoInhibitorHandler = new NaticoInhibitorHandler(this, {

@@ -1,6 +1,6 @@
 import { NaticoClient, NaticoCommandHandler, NaticoListenerHandler, NaticoClientOptions } from "../deps.ts";
 export class BotClient extends NaticoClient {
-  constructor(public options?: NaticoClientOptions) {
+  constructor(public options: NaticoClientOptions) {
     super(options);
   }
   commandHandler: NaticoCommandHandler = new NaticoCommandHandler(this, {
